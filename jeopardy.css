@@ -1,0 +1,143 @@
+/********************************************************************************
+ *
+ *  Copyright (c) 2009, Conan Albrecht <conan@warp.byu.edu>
+ *
+ *  This program is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ *********************************************************************************/
+
+
+/* Sets the body background and font */
+body { 
+  background-image: url("wallpaper.jpg");
+  font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
+}
+
+/** The setup window */
+.setupWindow {
+  color: #FFFFFF;
+}
+
+/** The credits at the bottom */
+div.credits {
+  color: #cccccc;
+  text-align: center;
+  font-size: 75%;
+}
+
+/** Makes the game take up the entire browser window */
+table.main {
+  width: 100%;
+}
+
+/** The left-side column for player names and scores */
+td.mainleft {
+  width: 200;
+  vertical-align: top;
+}
+
+/** The right-side column for the game board */
+td.mainright {
+  vertical-align: top;
+}
+
+/** The game board table itself */
+table.grid {
+  width: 100%;
+}
+
+
+/** The player information box (contains both name and score) */
+div.playerinfo {
+  padding: 25px 10px 10px 10px;
+  text-align: center;
+}
+
+/** The player name text */
+div.playername {
+  font-size: 100%;
+}
+
+/** The player score text */
+div.playerscore {
+  font-size: 150%;
+}
+
+/** The jeopardy game board header cells */
+div.gridheader {
+  color: #FFFF00;
+  padding: 25px 10px 10px 10px;
+  text-align: center;
+  font-size: 100%;
+}
+
+/** The jeopardy game board cells */
+div.griditem {
+  padding: 25px 10px 10px 10px;
+  text-align: center;
+  font-size: 125%;
+}
+
+/** The answer text in the answer popup */
+div.popuptext {
+  color: #FFFFFF;
+  padding: 20px;
+  text-align: center;
+  
+  font-size: 200%;
+  height: 100px;
+}
+
+/** The content of the edit player window */
+.editPlayerWindow {
+  color: #FFFFFF;
+}
+
+/** The player table in the answer window */
+.questionPlayerTable {
+  color: #FFFFFF;
+  margin-top: 15px;
+  margin-bottom: 30px;
+	border-width: 4px;
+	border-style: none;
+	border-color: gray;
+	border-collapse: separate;
+	width: 100%;
+}
+
+.questionPlayerTable td {
+  border-width: 2px;
+	padding: 5px;
+	border-style: none;
+	border-color: gray;
+}
+
+/** The player names in the answer window */
+.answerPlayerName {
+  color: #FFFFFF;
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+/** The player scores in the answer window */
+.answerWindowScores {
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+/** The player grade icons in the answer window */
+.answerWindowGrades {
+  color: #FFFFFF;
+  text-align: center;
+}
