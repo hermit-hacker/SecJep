@@ -1,0 +1,87 @@
+/* 
+  -- Even more rounded corners with CSS: Base stylesheet --
+*/
+
+.dialog-blue {
+ position:relative;
+ margin:0px auto;
+ min-width:8em;
+ max-width:760px; /* based on image dimensions - not quite consistent with drip styles yet */
+ color:#fff;
+ z-index:1;
+ margin-left:12px; /* default, width of left corner */
+ margin-bottom:0.5em; /* spacing under dialog */
+}
+
+.dialog-blue .content-blue,
+.dialog-blue .t-blue,
+.dialog-blue .b-blue,
+.dialog-blue .b-blue div {
+ background:transparent url(dialog2-blue-800x1600.png) no-repeat top right;
+ _background-image:url(dialog2-blue.gif);
+}
+
+.dialog-blue .content-blue {
+ position:relative;
+ zoom:1;
+ _overflow-y:hidden;
+ padding:0px 12px 0px 0px;
+}
+
+.dialog-blue .t-blue {
+ /* top+left vertical slice */
+ position:absolute;
+ left:0px;
+ top:0px;
+ width:12px; /* top slice width */
+ margin-left:-12px;
+ height:100%;
+ _height:1600px; /* arbitrary long height, IE 6 */
+ background-position:top left;
+}
+
+.dialog-blue .b-blue {
+ /* bottom */
+ position:relative;
+ width:100%;
+}
+
+.dialog-blue .b-blue,
+.dialog-blue .b-blue div {
+ height:30px; /* height of bottom cap/shade */
+ font-size:1px;
+}
+
+.dialog-blue .b-blue {
+ background-position:bottom right;
+}
+
+.dialog-blue .b-blue div {
+ position:relative;
+ width:12px; /* bottom corner width */
+ margin-left:-12px;
+ background-position:bottom left;
+}
+
+.dialog-blue .hd,
+.dialog-blue .b-blued,
+.dialog-blue .ft {
+ position:relative;
+}
+
+.dialog-blue .wrapper {
+ /* extra content protector - preventing vertical overflow (past background) */
+ position:static;
+ max-height:1000px;
+ overflow:auto; /* note that overflow:auto causes a rather annoying redraw "lag" in Firefox 2, and may degrade performance. Might be worth trying without if you aren't worried about height/overflow issues. */
+}
+
+.dialog-blue h1,
+.dialog-blue p {
+ margin:0px; /* margins will blow out backgrounds, leaving whitespace. */
+ padding:0.5em 0px 0.5em 0px;
+}
+
+.dialog-blue h1 {
+ padding-bottom:0px;
+}
