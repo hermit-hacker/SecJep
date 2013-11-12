@@ -1,0 +1,87 @@
+/* 
+  -- Even more rounded corners with CSS: Base stylesheet --
+*/
+
+.dialog-black {
+ position:relative;
+ margin:0px auto;
+ min-width:8em;
+ max-width:760px; /* based on image dimensions - not quite consistent with drip styles yet */
+ color:#fff;
+ z-index:1;
+ margin-left:12px; /* default, width of left corner */
+ margin-bottom:0.5em; /* spacing under dialog */
+}
+
+.dialog-black .content-black,
+.dialog-black .t-black,
+.dialog-black .b-black,
+.dialog-black .b-black div {
+ background:transparent url(dialog2-black-1600x1200.png) no-repeat top right;
+ _background-image:url(dialog2-black.gif);
+}
+
+.dialog-black .content-black {
+ position:relative;
+ zoom:1;
+ _overflow-y:hidden;
+ padding:0px 12px 0px 0px;
+}
+
+.dialog-black .t-black {
+ /* top+left vertical slice */
+ position:absolute;
+ left:0px;
+ top:0px;
+ width:12px; /* top slice width */
+ margin-left:-12px;
+ height:100%;
+ _height:1600px; /* arbitrary long height, IE 6 */
+ background-position:top left;
+}
+
+.dialog-black .b-black {
+ /* bottom */
+ position:relative;
+ width:100%;
+}
+
+.dialog-black .b-black,
+.dialog-black .b-black div {
+ height:30px; /* height of bottom cap/shade */
+ font-size:1px;
+}
+
+.dialog-black .b-black {
+ background-position:bottom right;
+}
+
+.dialog-black .b-black div {
+ position:relative;
+ width:12px; /* bottom corner width */
+ margin-left:-12px;
+ background-position:bottom left;
+}
+
+.dialog-black .hd,
+.dialog-black .b-blackd,
+.dialog-black .ft {
+ position:relative;
+}
+
+.dialog-black .wrapper {
+ /* extra content protector - preventing vertical overflow (past background) */
+ position:static;
+ max-height:1000px;
+ overflow:auto; /* note that overflow:auto causes a rather annoying redraw "lag" in Firefox 2, and may degrade performance. Might be worth trying without if you aren't worried about height/overflow issues. */
+}
+
+.dialog-black h1,
+.dialog-black p {
+ margin:0px; /* margins will blow out backgrounds, leaving whitespace. */
+ padding:0.5em 0px 0.5em 0px;
+}
+
+.dialog-black h1 {
+ padding-bottom:0px;
+}
