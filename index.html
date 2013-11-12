@@ -1,0 +1,128 @@
+<!--
+ -
+ -  Copyright (c) 2013, Brian Mork <hermit@cryptolingus.net>
+ -  Derived from JS Jeopardy!, copyright (c) 2009, Conan Albrecht <conan@warp.byu.edu>
+ -
+ -  This program is free software: you can redistribute it and/or modify
+ -  it under the terms of the GNU  General Public License as published by
+ -  the Free Software Foundation, either version 3 of the License, or
+ -  (at your option) any later version.
+ -
+ -  This program is distributed in the hope that it will be useful,
+ -  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ -  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ -  GNU General Public License for more details.
+ -
+ -  You should have received a copy of the GNU General Public License
+ -  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ -
+ -->
+ 
+<html>
+
+<head>
+<title>Security Jeopardy!</title>
+<link rel="stylesheet" href="dialog2-blue.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="dialog2-black.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="jeopardy.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="thickbox.css" type="text/css" media="screen" />
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="thickbox.js"></script>
+<script type="text/javascript" src="jeopardy.js"></script>
+<script type="text/javascript">
+  /** Starts the main function in the jeopardy.js file */
+  $(document).ready(function() {
+    main();
+  });
+</script>
+</head>
+
+<body>
+<table class="main"><tr>
+<td class="mainleft"><!-- start of left side of main table -->
+  <div>&nbsp;</div>
+  <div>&nbsp;</div>
+  <div id="players">
+  </div>
+  <div>&nbsp;</div>
+  <div>&nbsp;</div>
+  <div>&nbsp;</div>
+  <div id="finaljeopardydiv">
+  </div>
+  
+</td><td class="mainright" align="top"><!-- start of right side of main table -->
+  <div id="griddiv">
+  </div>
+</td>
+</tr></table>
+
+<div class="credits">Security Jeopardy!  Copyright (c) 2013 <a target="_blank" style="color:#FFFFCC" href="http://www.cryptolingus.net/sjs">Brian Mork</a>.  Based on work by <a target="_blank" style="color:#FFFFCC" href="http://warp.byu.edu">Conan C. Albrecht</a>.  Released under the <a target="_blank" style="color:#FFFFCC" href="http://www.fsf.org/licensing/">GNU General Public License</a>.</div>
+
+
+<!-- Hidden content for editing players -->
+<div id="editPlayerWindow" class="editPlayerWindow" style="display: none;" >
+<div>&nbsp;</div>
+<div align="center">
+<input type="hidden" id="editplayerindex">
+<table border=0 cellspacing=15 cellpadding=5><tr>
+  <td class="editPlayerWindow">Player Name:</td>
+  <td><input type="text" size="20" id="editplayername"></td>
+</tr><tr>
+  <td class="editPlayerWindow">Score:</td>
+  <td><input type="text" size="20" id="editplayerscore"></td>
+</tr></table>
+</div>
+<div align="right">
+  <input type="button" value="&nbsp;&nbsp;Delete&nbsp;&nbsp;" onclick="deletePlayer()">
+  <input type="button" value="&nbsp;&nbsp;Save&nbsp;&nbsp;" onclick="savePlayer()">
+</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div align="center">
+  <input type="button" value="&nbsp;&nbsp;Add Before&nbsp;&nbsp;" onclick="addPlayerBefore()">
+  &nbsp;&nbsp;
+  <input type="button" value="&nbsp;&nbsp;Add After&nbsp;&nbsp;" onclick="addPlayerAfter()">
+</div>
+</div>
+
+
+<!-- Hidden content shown when the user clicks an answer in the grid -->
+<div id="questionWindow" style="display:none;">
+<div id="questionplayers"></div>
+<div id="popuptext" class="popuptext" onclick="toggleAnswer()">Answer</div>
+</div>
+
+
+<!-- Hidden content shown at the beginning of the game -->
+<div id="setupWindow" style="display:none;" class="setupWindow">
+<div class="setupWindow" align="center"><h1>Security Jeopardy!</h1></div>
+<div>&nbsp;</div>
+<p class="setupWindow">Please choose the game to populate below:
+<ul>
+  <li><a href="#"  style="color:#FFFFCC" onclick="setupGameData(1)">Play Game One</a></li>
+  <li><a href="#"  style="color:#FFFFCC" onclick="setupGameData(2)">Play Game Two</a></li>
+  <li><a href="#"  style="color:#FFFFCC" onclick="setupGameData(3)">Play Game Three</a></li>
+  <li><a href="#"  style="color:#FFFFCC" onclick="setupGameData(4)">Play Game Four</a></li>
+</ul>
+</p>
+<p class="setupWindow" align="center"><textarea id="setupdata" rows="1" cols="90">Category,Points,Answer,Question
+</textarea></p>
+<p class="setupWindow" align="center">Number of Players:
+  <select id="setupnumplayers" onchange="changeDisplayedInputs()">
+      <option>1</option>
+      <option>2</option>
+      <option selected>3</option>
+    </select>
+  <input type="text" id="team1">
+  <input type="text" id="team2">
+  <input type="text" id="team3">
+</p>
+<p class="setupWindow" align="center"><input type="button" value="Play Security Jeopardy!" onclick="loadGame()"></p>
+<p class="setupWindow">
+</p>
+</div>
+
+
+</body>
+</html>
