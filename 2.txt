@@ -1,0 +1,23 @@
+﻿Category,Points,Answer,Question
+### GAME TWO SETUP ###
+Security Terms, 100, A term that refers to a one-way mathematical function used to fingerprint data, Hash
+Security Terms, 200, A term that refers to a two-way mathematical function used to encrypt data, Cipher
+Security Terms, 300, A term that refers to the concept of granting only the minimum amount of access required to perform a function, Least-Privileged Access 
+Security Terms, 400, A term that refers to a system designed to be compromised to aid researchers in finding and evaluating emerging attacks, Honeypot or Honeynet
+Hacking Tools, 100, A tool used to capture data "off the wire", Wireshark or tshark
+Hacking Tools, 200, A tool used to scan a network, Nmap
+Hacking Tools, 300, A tool used to query a DNS server, dig&#44; nslookup&#44; dnsenum&#44; or dnsrecon
+Hacking Tools, 400, A tool used to test exploitation of MS SQL sites, sqlninja
+Famous Hackers, 100, He made social engineering famous, Kevin Mitnick
+Famous Hackers, 200, She founded a company named Adafruit, Limor Fried
+Famous Hackers, 300, He goes by the handle of "Rel1k", Dave Kennedy
+Famous Hackers, 400, She is single-handedly responsible for much of the mobile exploitation work that has been done since 2008, Georgia Weidman
+Physical Security, 100, Evacuations at Alliance Data are this, Mandatory
+Physical Security, 200, This is how you should carry your laptop and other mobile devices when traveling, In carry-on bags or with you
+Physical Security, 300, This is how you pre-register a visitor, Use InView link or email reception
+Physical Security, 400, This is the number you have to dial from a corporate desk phone to reach emergency services (police&#44; fire&#44; or medical), 9911
+Computer Languages, 100, The main markup language used on the Internet, HTML (HyperText Markup Language)
+Computer Languages, 200, A popular scripting language which controls modules using CPAN, Perl
+Computer Languages, 300, A common web scripting language included in standard LAMP stacks, PHP
+Computer Languages, 400, The langauge that Rails is written on, Ruby
+Final Jeopardy, 500, This term refers to when a journalist has so completely misunderstood a technology and culture that it becomes a running joke, "Forbsed It"
